@@ -11,10 +11,10 @@
   "scripts": {
     "clean-lib": "rimraf lib",
     "clean-tmp": "rimraf .tmp",
-    "clean": "npm run clean-lib && npm run clean-tmp",
-    "build": "npm run clean && babel ./src -d lib",
-    "prepublish": "npm run build",
-    "test": "npm run clean && mocha --compilers js:babel-register --recursive test/unit",
+    "clean": "redrun clean-lib && redrun clean-tmp",
+    "build": "redrun clean && babel ./src -d lib",
+    "prepublish": "redrun build",
+    "test": "redrun clean && mocha --compilers js:babel-register --recursive test/unit",
     "release": "np"
   },
   "repository": {
@@ -33,6 +33,7 @@
     "babel-register": "^6.14.0",
     "mocha": "^3.0.2",
     "np": "^2.9.0",
+    "redrun": "^5.8.1",
     "rimraf": "^2.5.4",
     "semistandard": "^9.0.0"
   },
