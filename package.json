@@ -1,6 +1,6 @@
 {
   "name": "@zinserjan/release-test",
-  "version": "2.0.0-6",
+  "version": "2.0.0",
   "description": "Just a repository to test different kinds of release scripts before using them on real projects",
   "main": "index.js",
   "files": [
